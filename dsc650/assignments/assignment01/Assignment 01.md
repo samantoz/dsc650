@@ -29,26 +29,33 @@ author: Arindam Samanta
 #### b. Scaling
 ```
 - Refer back to data sizes for the daily Instagram photos
-- 1 1024x768 PNG image is roughly 457.04 KB
-- If roughly 100 million videos and photos are uploaded every day, and 75% are PNG photos, that means 75M are photos.
-- 75000000 x 0.45704 MB = 34278000 MB to store daily insta photos
-- 34278000 MB X 3 (To account for HDFS) = 102834000 MB
-- 102834000 MB = 98.0701 TB
-- You would need about 10 10TB HD to store this data
+	- 1 1024x768 PNG image is roughly 457.04 KB
+	- If roughly 100 million videos and photos are uploaded every day, and 75% are PNG photos, that means 75M are photos.
+	- 75,000,000 x 457.04 KB = 34,278,000,000 KB ~ 34,278,000 MB  to store daily insta photos
+	- 34,278,000 MB X 3 (To account for HDFS) = 102,834,000 MB
+	- 102,834,000 MB = 98.0701 TB
+	- You would need about 10 10TB HD to store this data
+- Daily Twitter Tweets (Uncompressed)
+	-size of One tweet of 128 characters(on avg) is 128 Bytes
+	-500,000,000 * 128 B=	
+- Yearly 
 ```
 
 |                                           | Size     | # HD |
 |-------------------------------------------|---------:|-----:|
 | Daily Twitter Tweets (Uncompressed)       | 62 GB    |      | # 500 million * 128 B ~ 62GB
 | Daily Twitter Tweets (Snappy Compressed)  | ??       |      |
-| Daily Instagram Photos                    | ??       |      | # assuming 75M(75*457KB) photos and 25M() videos
+| Daily Instagram Photos                    | 34 TB    |10    | # assuming 75M(75*457KB) photos and 25M() videos
 | Daily YouTube Videos                      | ??       |      |
-| Yearly Twitter Tweets (Uncompressed)      | 22,630 GB|      | 365 * 62
+| Yearly Twitter Tweets (Uncompressed)      | 23 TB    |3      | 365 * 62
 | Yearly Twitter Tweets (Snappy Compressed) | ??       |      |
 | Yearly Instagram Photos                   | ??       |      |
 | Yearly YouTube Videos                     | ??       |      |
 
 #### c. Reliability
+```
+Using the yearly estimates from the previous part, estimate the number of hard drive failures per year using data from Backblaze’s hard drive statistics.
+```
 |                                    | # HD | # Failures |
 |------------------------------------|-----:|-----------:|
 | Twitter Tweets (Uncompressed)      | ??   |            |
