@@ -46,8 +46,8 @@ author: Arindam Samanta
 | Daily Twitter Tweets (Uncompressed)       | 62 GB    |      | # 500 million * 128 B ~ 62GB
 | Daily Twitter Tweets (Snappy Compressed)  | ??       |      |
 | Daily Instagram Photos                    | 34 TB    |10    | # assuming 75M(75*457KB) photos and 25M() videos
-| Daily YouTube Videos                      | ??       |      |
-| Yearly Twitter Tweets (Uncompressed)      | 23 TB    |3      | 365 * 62
+| Daily YouTube Videos                      | 4300 TB  |430   |
+| Yearly Twitter Tweets (Uncompressed)      | 23 TB    |3     | 365 * 62
 | Yearly Twitter Tweets (Snappy Compressed) | ??       |      |
 | Yearly Instagram Photos                   | ??       |      |
 | Yearly YouTube Videos                     | ??       |      |
